@@ -26,7 +26,7 @@ pipeline {
 		}
 		stage('Deliver') {
 			steps {
-				sh 'sudo chmod 777 ./run.sh'
+				sh 'chmod 777 ./run.sh'
 				sh './run.sh'
 			}
 		}
