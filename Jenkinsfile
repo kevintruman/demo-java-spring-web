@@ -3,6 +3,7 @@ pipeline {
 		docker {
 			image 'maven:3.8.4-openjdk-11-slim'
 			args '-v /root/.m2:/root/.m2'
+			args '-p 9010:8080'
 		}
 	}
 	options {
@@ -27,7 +28,10 @@ pipeline {
 		stage('Deliver') {
 			steps {
 				sh 'chmod 777 ./run.sh'
+				sh 'chmod 777 ./kill.sh'
 				sh './run.sh'
+				input message: 'Finished using the web site? (Click "Proceed" to continue)'
+				sh './kill.sh'
 			}
 		}
 	}
