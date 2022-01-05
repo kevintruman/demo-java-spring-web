@@ -24,5 +24,10 @@ pipeline {
 				}
 			}
 		}
+		stage('Deliver') {
+			steps {
+				sh './run.sh'
+			}
+		}
 	}
 }
