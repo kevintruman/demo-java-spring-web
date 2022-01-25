@@ -27,8 +27,8 @@ pipeline {
 		}
 		stage('Deliver') {
 			steps {
-				sh 'chmod 777 ./run.sh'
-				sh 'chmod 777 ./kill.sh'
+				// sh 'chmod 777 ./run.sh'
+				// sh 'chmod 777 ./kill.sh'
 				sh 'java -jar target/demo-0.0.1-SNAPSHOT.jar'
 				// sh './run.sh'
 				// input message: 'Finished using the web site? (Click "Proceed" to continue)'
