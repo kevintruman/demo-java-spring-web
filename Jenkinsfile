@@ -30,8 +30,8 @@ pipeline {
 				sh 'chmod 777 ./run.sh'
 				sh 'chmod 777 ./kill.sh'
 				sh './run.sh'
-				input message: 'Finished using the web site? (Click "Proceed" to continue)'
-				sh './kill.sh'
+				// input message: 'Finished using the web site? (Click "Proceed" to continue)'
+				// sh './kill.sh'
 			}
 		}
 	}
