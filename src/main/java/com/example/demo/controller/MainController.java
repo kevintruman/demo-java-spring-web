@@ -11,7 +11,7 @@ public class MainController {
 
     @GetMapping
     public String name() {
-        return "hello";
+        return "hello kev";
     }
     
 }
